@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: "#06b6d4", // cyan-500
+        accent: "#4f46e5", // indigo-600
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

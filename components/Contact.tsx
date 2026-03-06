@@ -9,30 +9,38 @@ const contactLinks = [
     label: "Email",
     value: profile.email,
     href: `mailto:${profile.email}`,
+    color: "from-indigo-500 to-indigo-600",
+    bg: "bg-indigo-50 border-indigo-100",
   },
   {
     icon: <Phone size={20} />,
     label: "Phone",
     value: profile.phone,
     href: `tel:${profile.phone}`,
+    color: "from-violet-500 to-violet-600",
+    bg: "bg-violet-50 border-violet-100",
   },
   {
     icon: <Github size={20} />,
     label: "GitHub",
-    value: "github.com/fabyanbui",
+    value: "fabyanbui",
     href: profile.github,
+    color: "from-slate-600 to-slate-700",
+    bg: "bg-slate-50 border-slate-200",
   },
   {
     icon: <Linkedin size={20} />,
     label: "LinkedIn",
-    value: "linkedin.com/in/fabyanbui",
+    value: "in/fabyanbui",
     href: profile.linkedin,
+    color: "from-blue-500 to-blue-600",
+    bg: "bg-blue-50 border-blue-100",
   },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 bg-white/[0.01]">
+    <section id="contact" className="py-24 px-6 section-alt">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,11 +48,12 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+          <p className="text-indigo-600 font-mono text-sm font-medium mb-1 tracking-wide">06. contact</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <div className="w-12 h-1 bg-accent rounded mb-4" />
-          <p className="text-slate-400 mb-10 max-w-lg">
+          <div className="w-12 h-1 bg-indigo-500 rounded mb-4" />
+          <p className="text-slate-500 mb-10 max-w-lg text-sm leading-relaxed">
             I&apos;m open to new opportunities. Whether you have a question, a project, or just want to say hi — feel free to reach out!
           </p>
         </motion.div>
@@ -60,14 +69,14 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.08 }}
-              className="glass rounded-2xl p-6 flex flex-col items-center text-center gap-3 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 group"
+              className="glass glass-hover rounded-2xl p-6 flex flex-col items-center text-center gap-3 group"
             >
-              <span className="text-accent group-hover:scale-110 transition-transform duration-200">
+              <div className={`w-11 h-11 rounded-xl border flex items-center justify-center bg-gradient-to-br ${link.color} text-white shadow-sm group-hover:scale-105 transition-transform duration-200`}>
                 {link.icon}
-              </span>
+              </div>
               <div>
-                <p className="text-xs text-slate-500 uppercase tracking-wide">{link.label}</p>
-                <p className="text-sm text-slate-300 mt-0.5 font-medium">{link.value}</p>
+                <p className="text-xs text-slate-400 uppercase tracking-wider font-medium">{link.label}</p>
+                <p className="text-sm text-slate-700 mt-0.5 font-semibold break-all">{link.value}</p>
               </div>
             </motion.a>
           ))}

@@ -1,12 +1,13 @@
 export const profile = {
   name: "Bui Dinh Bao",
-  tagline: "AI Engineer & Data Science",
+  tagline: "Computer Science Engineer",
+  subtitle: "AI · Data Science · Full-Stack",
   email: "dinhbao.itech@gmail.com",
   phone: "+84 975 742 607",
   linkedin: "https://linkedin.com/in/fabyanbui",
   github: "https://github.com/fabyanbui",
   objective:
-    "Aspiring AI & Data Science professional with strong skills in machine learning, analytics, and system building. Seeking opportunities to apply expertise and grow toward becoming a specialized AI/DS expert.",
+    "Computer Science graduate with a passion for building intelligent systems. Combining hands-on experience in AI/ML engineering, data science, and full-stack development to create technology that is reliable, impactful, and human-centred.",
 };
 
 export const education = {
