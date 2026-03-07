@@ -1,17 +1,14 @@
+import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
 import { profile } from "@/lib/data";
 
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-slate-200 py-8 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-2.5">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
-            <span className="text-white font-bold font-mono text-xs leading-none">B</span>
-          </div>
-          <span className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} Bui Dinh Bao &mdash; Built with Next.js &amp; Tailwind CSS
-          </span>
+          <Image src="/logo.svg" alt="B logo" width={24} height={24} className="rounded-md" />
+          <span className="text-slate-400 text-sm">&copy; {new Date().getFullYear()} Bui Dinh Bao</span>
         </div>
 
         <div className="flex items-center gap-3">

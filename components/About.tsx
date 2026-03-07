@@ -13,15 +13,14 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-indigo-600 font-mono text-sm font-medium mb-1 tracking-wide">01. about</p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
             About <span className="text-gradient">Me</span>
           </h2>
           <div className="w-12 h-1 bg-indigo-500 rounded mb-10" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Left — Objective */}
+        <div className="flex flex-col gap-6">
+          {/* Objective */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -29,10 +28,10 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="glass glass-hover rounded-2xl p-8"
           >
-            <h3 className="text-lg font-semibold text-slate-900 mb-4">Objective</h3>
-            <p className="text-slate-600 leading-relaxed">{profile.objective}</p>
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Objective</h3>
+            <p className="text-slate-600 leading-relaxed text-base">{profile.objective}</p>
 
-            <div className="mt-6 flex flex-col gap-2.5 text-sm text-slate-400">
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2.5 text-sm text-slate-400">
               <span className="flex items-center gap-2">
                 <MapPin size={14} className="text-indigo-500" />
                 Ho Chi Minh City, Vietnam
@@ -47,7 +46,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right — Education */}
+          {/* Education */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -55,16 +54,16 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="glass glass-hover rounded-2xl p-8"
           >
-            <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-              <GraduationCap size={20} className="text-indigo-500" />
+            <h3 className="text-xl font-semibold text-slate-900 mb-4 flex items-center gap-2">
+              <GraduationCap size={22} className="text-indigo-500" />
               Education
             </h3>
 
             <div>
-              <p className="font-semibold text-slate-900 text-base">{education.school}</p>
-              <p className="text-slate-500 text-sm mt-0.5">{education.faculty}</p>
+              <p className="font-semibold text-slate-900 text-lg">{education.school}</p>
+              <p className="text-slate-500 text-base mt-0.5">{education.faculty}</p>
 
-              <div className="mt-4 space-y-2.5 text-sm">
+              <div className="mt-5 flex flex-wrap gap-x-8 gap-y-2.5 text-sm">
                 <div className="flex items-center gap-2 text-slate-700">
                   <span className="text-indigo-500">◦</span>
                   {education.degree} — {education.major}

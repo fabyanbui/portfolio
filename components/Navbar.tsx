@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -32,13 +33,15 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-sm group-hover:shadow-indigo-200 transition-shadow duration-200">
-            <span className="text-white font-bold font-mono text-sm leading-none">B</span>
-          </div>
-          <span className="font-semibold text-slate-800 text-sm tracking-tight hidden sm:block">
-            Bui Dinh Bao
-          </span>
+        <a href="#" className="flex items-center group">
+          <Image
+            src="/logo.svg"
+            alt="B logo"
+            width={42}
+            height={42}
+            className="rounded-xl shadow-sm group-hover:shadow-indigo-200 transition-shadow duration-200"
+            priority
+          />
         </a>
 
         {/* Desktop */}

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     title: "Bui Dinh Bao | AI Engineer & Data Science",
     description: "Portfolio of Bui Dinh Bao — AI Engineer and Data Science graduate.",
     type: "website",
+    images: [{ url: "/logo.svg" }],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo.svg",
   },
 };
 
