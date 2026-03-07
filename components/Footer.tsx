@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
 import { profile } from "@/lib/data";
+import basePath from "@/lib/basePath";
 
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-slate-200 py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-2.5">
-          <Image src="/logo.svg" alt="B logo" width={24} height={24} className="rounded-md" />
+          <Image src={`${basePath}/logo.svg`} alt="B logo" width={24} height={24} className="rounded-md" />
           <span className="text-slate-400 text-sm">&copy; {new Date().getFullYear()} Bui Dinh Bao</span>
         </div>
 

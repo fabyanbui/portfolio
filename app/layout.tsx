@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import basePath from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Bui Dinh Bao | AI Engineer & Data Science",
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
     title: "Bui Dinh Bao | AI Engineer & Data Science",
     description: "Portfolio of Bui Dinh Bao — AI Engineer and Data Science graduate.",
     type: "website",
-    images: [{ url: "/logo.svg" }],
+    images: [{ url: `${basePath}/logo.svg` }],
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.svg",
+    icon: `${basePath}/favicon.ico`,
+    apple: `${basePath}/logo.svg`,
   },
 };
 

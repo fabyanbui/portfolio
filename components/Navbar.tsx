@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import basePath from "@/lib/basePath";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -35,7 +36,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center group">
           <Image
-            src="/logo.svg"
+            src={`${basePath}/logo.svg`}
             alt="B logo"
             width={42}
             height={42}
